@@ -89,7 +89,7 @@ urlpatterns = [
     url(r'^login/', obtain_jwt_token),
 
     url(r'^alipay/return/', AlipayView.as_view(), name="alipay"),
-  	url(r'^ueditor/',include('DjangoUeditor.urls' )),
+  url(r'^ueditor/',include('DjangoUeditor.urls' )),
 ]
 
 
