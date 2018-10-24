@@ -76,7 +76,8 @@ urlpatterns = [
     url(r'^xadmin/', xadmin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),    
     url(r'^media/(?P<path>.*)$', serve, {"document_root": MEDIA_ROOT}),
-
+	
+	url('', include('social_django.urls', namespace='social')),
     url(r'^', include(router.urls)),
 
     url(r'^index/', TemplateView.as_view(template_name="index.html"), name="index"),
