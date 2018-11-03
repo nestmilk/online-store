@@ -159,11 +159,15 @@ export default {
     },
     methods:{
         loginOut(){
+          cookie.delCookie('token');
+          cookie.delCookie('name');
+          //跳转到登录
+          this.$router.push({name: 'login'})
             // this.$http.get('/getMenu')
             //     .then((response)=> {
 
                     //跳转到登录
-                    this.$router.push({ name: 'login' })
+                    // this.$router.push({ name: 'login' })
             //     })
             //     .catch(function (error) {
             //       console.log(error);
